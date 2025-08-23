@@ -1,0 +1,6 @@
+Project=>
+1 PRD project requierment document 
+used to keep what to build and what not to build 
+for example we want a authentication feature 
+we need a create acc, login , google login, forgot password
+PMP project management platform 
