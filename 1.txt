@@ -43,3 +43,58 @@ and then change the  JSON file from node to nodemon
 use the command=>npm i d0tenv 
 this is to safe guard the sensitive data that is excessed through process.env
 
+
+
+Now we need to restructure the project as it is very easy at this point 
+we can use lib like nest js which automatically makes some default folders
+
+we forst need a public folder which will server everything 
+we need to wrap everything in a folder named scr
+the controllers , which contain all the logic and function 
+db for data base 
+middlewres , this is between the server and the database
+models=>structure of how you are going to store the data in the database
+routes
+utils
+validators
+
+
+
+the git never stores any empty folders
+
+
+ctrl + c to kill the server
+
+
+To install exprees ude the command => npm install express --save 
+
+dont use spacce in env files 
+
+
+Using Postman for API teesting and API development 
+
+
+Separating the index and the app file 
+it makes the entrance point of the project shorter and more readable 
+
+
+Cross-origin resource sharing CORS 
+
+app.use->middlewares 
+
+CORS is a nodejs package for providing a connect/exprees middlewares that can be used to enable CORS with various options 
+
+
+So cors basicaaly tab kaam ata hai jab tumhara frionted ek port pe chal raha ho or backend kisi or port pe , tab generally browsers uss chiz ko block kr dete hain uss process ko smooth krne ke liye Cros ka use krte hhain 
+
+it is basically saying that what the backend is allowed to have contact with 
+
+
+WORKING ON THE RESPONSES FROM THE SRERVER TO THE BACKEND
+
+Response can be of known types , 1 status code 2 data 3 message 
+also error
+status code
+data mesage 
+
+Now the error are already there in node js but we need to design the Responseby oueselves 
