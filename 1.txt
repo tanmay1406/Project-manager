@@ -4,3 +4,42 @@ used to keep what to build and what not to build
 for example we want a authentication feature 
 we need a create acc, login , google login, forgot password
 PMP project management platform 
+
+
+
+
+the very first step after creating the PRD is to set up the project 
+
+
+to setup node for backed use command=> npm init 
+and then fill up the rest of the list and thhen edit the script in the JSON file to your requierment
+
+
+
+Now we need to make a feature such that all the devs are in sync in writing the code 
+to get the uniformat we use prettier , write the command =>  npm install --save-dev --save-exact prettier
+
+and then use => npx prettier . --write 
+
+
+now you may ask where are the uniform syntax =>many of them are already set as default 
+and for others we need to create a file for it .prettierrc
+and .prettierignore this tells it what files not to touch 
+
+
+
+# Auto restart your server
+kuch bhi change karein toh server apne app refresh ho jaye uske liye kya karein?
+nodemon will be used 
+node --watch
+
+use the command => npm install --save-dev nodemon
+this refreshes the server everytime it detects a change in any of the files 
+
+and then change the  JSON file from node to nodemon
+
+
+# .env files on backend
+use the command=>npm i d0tenv 
+this is to safe guard the sensitive data that is excessed through process.env
+
