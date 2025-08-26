@@ -37,6 +37,7 @@ use the command => npm install --save-dev nodemon
 this refreshes the server everytime it detects a change in any of the files 
 
 and then change the  JSON file from node to nodemon
+iss case mei sirf npm run dev hi use krna hoga 
 
 
 # .env files on backend
@@ -98,3 +99,8 @@ status code
 data mesage 
 
 Now the error are already there in node js but we need to design the Responseby oueselves 
+
+
+
+How to connect to Database ?
+moongoose allows you to talk to the database in a very easy syntax
