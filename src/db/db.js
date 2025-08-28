@@ -3,7 +3,7 @@ import mongoose from "mongoose"
 
 const connnectDB = async()=>{
     try {
-        await mongoose.connect(process.env.MONGO_URI)//await basically says take as much tie as you need
+        await mongoose.connect(process.env.MONGO_URI)//await basically says take as much time as you need
         console.log("MongoDB connected")
     } catch (error) {
         console.error("Moongose connection error",error)
