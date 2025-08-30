@@ -104,3 +104,18 @@ Now the error are already there in node js but we need to design the Responseby 
 
 How to connect to Database ?
 moongoose allows you to talk to the database in a very easy syntax
+
+
+Yahan tak tera basic tempplate hai , jo har project mei jana hi chahiye 
+HEALTH CHECK APIs
+this is done in routes first 
+
+
+
+
+
+
+
+
+
+Database ka pura schema models mei rakhte hain 

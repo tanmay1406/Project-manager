@@ -8,4 +8,4 @@ class APIResponse{
     }
 }
 
-export{APIResponse}
+export default APIResponse
