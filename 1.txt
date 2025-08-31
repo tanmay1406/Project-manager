@@ -119,3 +119,31 @@ this is done in routes first
 
 
 Database ka pura schema models mei rakhte hain 
+Hashing your password using hooks from moongoose
+install bcrypt ye wala kaam bhi user-models mei hi kiya jata hai 
+
+
+
+How to check for password when someone tries to entre 
+This is done by hashing the entered password and then comparing it to the hashed data stored into the database 
+
+
+WORKING WITH JWT TOKENS 
+basically the server sends you back a string that tells the browser if the user is registered or not 
+This is mainly used for authentication and information exchange 
+Once the user is logged in , each subsequesnt request will include the JWT 
+postman->headers->new key (authentication)->bearer->pass on any value that needs to be returned vaefuvuqfeglrehg
+
+
+A JWT token contain three things
+Header, Payload, Signature
+
+TOKEN can be of two types , with data and without data 
+without data is for only one time use like veryfying the data (majorly used for things like reset password a lot)
+
+Access token is a short time token 
+refresh token is a long term token 
+the generation is same for same they only differ is refresh token is with data 
+
+Access token is like a fingerprint but refresh token is stored in the database
+
