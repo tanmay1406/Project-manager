@@ -147,3 +147,29 @@ the generation is same for same they only differ is refresh token is with data
 
 Access token is like a fingerprint but refresh token is stored in the database
 
+
+Now creating the required token this also takea place in the user-models
+
+to generate these we need another module 
+npm install jsonwebtoken
+
+
+Now creating tokens wiithout data we need another module 
+its a inbuilt function node js 
+
+it is called crypto
+
+
+
+
+Now we need to share the verification email to the user 0, this will be done using another libraray 
+npm install mailgen, this is only to prepare the content that you want to send throug the email 
+
+
+Now we will send the email to the user 
+we can use AWS SES 
+Brevo
+these two are production grade ,
+there testing level as well -> mailtrap
+W also need a lib nodemailer to actually send the mails
+go to env folder for this one 
