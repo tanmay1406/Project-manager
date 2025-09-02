@@ -20,9 +20,10 @@ app.use(cors({
 
 //import the routes
 import healthCheckRouter from "./routes/healthCheck.routes.js"
+import authRouter from "./routes/auth.routes.js"
 
 app.use("/api/v1/healthcheck",healthCheckRouter)//this goes to the router file and there usses the use() to check the api 
-
+app.use("/api/v1/auth",authRouter)
 app.get("/",(req,res)=>{
     res.send("Hello World")
 })

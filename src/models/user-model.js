@@ -39,7 +39,7 @@ const userSchema = new Schema(
             required:[true,"password is requires"]
         },
         isEmailVerified:{
-            type:boolean,
+            type:Boolean,
             default:false
         },
         refreshToken:{
@@ -111,6 +111,6 @@ userSchema.methods.generateTempToken=function(){
 }
 
 
-export const user=mongoose.model("User",userSchema)
+export const User=mongoose.model("User",userSchema)
 
 //use a service for the default avatar
