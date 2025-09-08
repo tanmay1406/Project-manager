@@ -24,18 +24,18 @@ const generateAccessAndRfreshToken=async (userID)=>{
 
 
 const registerUser=asyncHandler(async (req,res)=>{
-    const{email,username,password,role}=req.body
+    const{email_id,userName,password,role}=req.body
     const ExistingUser=await User.findOne({
-        $or:[{username},{email}]
+        $or:[{userName},{email_id}]
     })
     if(ExistingUser){
         throw new ApiError(409,"User with email or username already exists",[])
     }
 
     const user = await User.create({
-        email,
+        email_id,
         password,
-        username,
+        userName,
         isEmailVerified:false,
 
     })
@@ -49,10 +49,10 @@ const registerUser=asyncHandler(async (req,res)=>{
     await user.save({validateBeforeSave:false})
     await sendEmail(
         {
-            email:user?.email,
+            email_id:user?.email_id,
             subject:"Please verify your email",
             mailgenContent:emailVerificationMailgenContent(
-                user.username,
+                user.userName,
                 `${req.protocol}://${req.get("host")}/api/v1/users/verify-email/${unhasehdToken}`
             )
         }

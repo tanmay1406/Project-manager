@@ -173,3 +173,29 @@ these two are production grade ,
 there testing level as well -> mailtrap
 W also need a lib nodemailer to actually send the mails
 go to env folder for this one 
+
+
+
+Now lets actually register a user 
+How do you collect the data from the frontend ?
+by going into postman and then in the body section  and then choosing raw
+Now we will use all the token method to create thee tokens 
+
+
+
+then we create the routes for these registered users 
+
+#convert everystep to text in between class through git 
+
+
+
+VALIDATORS
+Basically the data that is coming from the routes to the database needs to checked if they are of the type defined 
+like passwords, email
+
+ZOD , YUP , express validators
+we need to work on three things in this section 
+middlewares,validators,routes
+
+first install
+npm install express-validator
