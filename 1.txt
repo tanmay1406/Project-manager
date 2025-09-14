@@ -199,3 +199,34 @@ middlewares,validators,routes
 
 first install
 npm install express-validator
+
+
+
+
+
+
+
+
+login
+take data from the user
+validate the data 
+if user exist 
+if password is correct
+generate tokens
+send tokens in cookies as well 
+
+
+Now fro the cookies , has a problem that we need to solve 
+npm install cookie-parser
+or ye sab kuch app.js mei hoga 
+
+
+Now go to auth controllers 
+yahan pe password check kro 
+or phir token gen kr do 
+and then start to work with cookie
+
+
+
+
+Phir auth routes mei jao aur login ka ek route bana do 

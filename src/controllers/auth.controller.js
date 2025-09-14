@@ -80,4 +80,54 @@ const registerUser=asyncHandler(async (req,res)=>{
 
 })
 
-export {registerUser}
+const login=asyncHandler(async(req,res)=>{
+    const {email_id,password,userName}=req.body
+    if(!userName || !email_id){
+        throw new ApiError(400,"Username or email id already exists")
+    }
+
+    const user=await User.findOne({email_id})
+
+    if(!user){
+        throw new ApiError(400,"User does not exist")
+    }
+
+
+     const isPasswordValid=await user.isPasswordCorrect(password)
+
+     if(!isPasswordCorrect){
+        throw new ApiError(400,"Password is incorrect")
+     }
+
+
+     const {accessToken,refreshToken}=await generateAccessAndRfreshToken(user._id) 
+
+
+
+     const loggedInUser=await User.findById(user._id).select(
+        "-password -refresHToken -emailVerificationToken -emailVerificationExpiry" 
+    )
+
+    //cookies 
+    const options={
+        httpOnly:true,
+        secure:true
+    }
+
+    return res
+        .status(200)
+        .cookie("Access Token",accessToken,options)
+        .cookie("Refersh Token",refreshToken,options)
+        .json(
+            200,
+            {
+                user:loggedInUser,
+                accessToken,
+                refreshToken
+            },
+            "User logged in successfully"
+        )
+
+})
+
+export {registerUser,login}
